@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const Mail = require('../config/mail');
+
 var d3 = require('d3'),
   jsdom = require('jsdom');
 

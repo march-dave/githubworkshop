@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <script>
+    function likes(names) {
+
+        if (names.length == 0) return 'no one likes this';
+
+        return names.reduce( (prev, current, index, array) => {
+          if (array.length == 0) return current + ' likes this';
+          if (index == array.length - 1) {
+            return prev + ' ' + current + ' like this'
+          }
+          else {
+            return prev + ' ' + current;
+          }
+        }, '');
+    }
+
+     console.log(likes(['Jacob', 'Alex', 'Mark'])); //Jacob and Alex
+
+
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>
